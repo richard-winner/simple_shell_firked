@@ -20,7 +20,7 @@ void ffree(char **pp)
 /**
  * _memset - Use constant byte in filling memory
  * @b: *s, the byte to be filled witht
- * @n: byte amount to be filled 
+ * @n: byte amount to be filled
  * @s: Memory area poionter
  * Return: A pointer is returned on memory area s
  */

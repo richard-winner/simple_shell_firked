@@ -1,7 +1,7 @@
 #include "shell.h"
 
 /*
- * hsh - Shell loop main
+ * @hsh - Shell loop main
  * @av: Argument vector
  * @info: the param struct
  * Return: success return 0, error return 1
@@ -45,7 +45,7 @@ int hsh(info_t *info, char **av)
 }
 
 /*
- * find_builtin: It finds builtin command 
+ * @find_builtin: It finds builtin command
  * @info: the param struct
  * Return:
  * bultin and success return -0
