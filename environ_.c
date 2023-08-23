@@ -1,23 +1,22 @@
 #include "shell.h"
 
 /**
- * _myenv - prints the current environment
- * @info: Structure containing potential arguments. Used to maintain
- *          constant function prototype.
- * Return: Always 0
+ * _myenv - the function here prints the current environment
+ * @info: the structure containing potential arguments
+ * Used to maintain constant function prototype.
+ * Return: Always return 0
  */
 int _myenv(info_t *info)
 {
 	print_list_str(info->env);
 	return (0);
 }
-
 /**
- * _getenv - gets the value of an environ variable
- * @info: Structure containing potential arguments. Used to maintain
- * @name: env var name
- *
- * Return: the value
+ * _getenv - this function also gets the value of an environ variable
+ * @info: the structure containing potential arguments
+ * Used to maintain
+ * @name: the env var name
+ * Return: this is the value
  */
 char *_getenv(info_t *info, const char *name)
 {
@@ -33,13 +32,13 @@ char *_getenv(info_t *info, const char *name)
 	}
 	return (NULL);
 }
-
 /**
- * _mysetenv - Initialize a new environment variable,
- *             or modify an existing one
- * @info: Structure containing potential arguments. Used to maintain
- *        constant function prototype.
- *  Return: Always 0
+ * _mysetenv - this is the function initialize a new environmen
+ variable,
+ * or modify an existing one
+ * @info: this is structure containing potential arguments
+ *  constant function prototype
+ *  Return: Always return 0
  */
 int _mysetenv(info_t *info)
 {
@@ -54,39 +53,39 @@ int _mysetenv(info_t *info)
 }
 
 /**
- * _myunsetenv - Remove an environment variable
- * @info: Structure containing potential arguments. Used to maintain
- *        constant function prototype.
- * Return: Always 0
+ * _myunsetenv - the function removes an environment variable
+ * @info: this is structure containing potential arguments
+ * constant function prototype
+ * Return: Always return 0
  */
 int _myunsetenv(info_t *info)
 {
-	int i;
+	int v;
 
 	if (info->argc == 1)
 	{
 		_eputs("Too few arguements.\n");
 		return (1);
 	}
-	for (i = 1; i <= info->argc; i++)
-		_unsetenv(info, info->argv[i]);
+	for (v = 1; v <= info->argc; v++)
+		_unsetenv(info, info->argv[v]);
 
 	return (0);
 }
 
 /**
- * populate_env_list - populates env linked list
- * @info: Structure containing potential arguments. Used to maintain
- *          constant function prototype.
- * Return: Always 0
+ * populate_env_list - the function populates env linked list
+ * @info: this is the structure containing potential argument
+ * constant function prototype
+ * Return: Always return 0
  */
 int populate_env_list(info_t *info)
 {
 	list_t *node = NULL;
-	size_t i;
+	size_t v;
 
-	for (i = 0; environ[i]; i++)
-		add_node_end(&node, environ[i], 0);
+	for (v = 0; environ[v]; v++)
+		add_node_end(&node, environ[v], 0);
 	info->env = node;
 	return (0);
 }

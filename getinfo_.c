@@ -1,8 +1,8 @@
 #include "shell.h"
 
 /**
- * clear_info - initializes info_t struct
- * @info: struct address
+ * clear_info - function here initializes info_t struct
+ * @info: the struct address
  */
 void clear_info(info_t *info)
 {
@@ -13,13 +13,13 @@ void clear_info(info_t *info)
 }
 
 /**
- * set_info - initializes info_t struct
- * @info: struct address
- * @av: argument vector
+ * set_info - function here initializes info_t struct
+ * @info: the struct address
+ * @av: the argument vector
  */
 void set_info(info_t *info, char **av)
 {
-	int i = 0;
+	int v = 0;
 
 	info->fname = av[0];
 	if (info->arg)
@@ -34,9 +34,9 @@ void set_info(info_t *info, char **av)
 				info->argv[1] = NULL;
 			}
 		}
-		for (i = 0; info->argv && info->argv[i]; i++)
+		for (v = 0; info->argv && info->argv[v]; v++)
 			;
-		info->argc = i;
+		info->argc = v;
 
 		replace_alias(info);
 		replace_vars(info);
@@ -44,9 +44,9 @@ void set_info(info_t *info, char **av)
 }
 
 /**
- * free_info - frees info_t struct fields
- * @info: struct address
- * @all: true if freeing all fields
+ * free_info - the function frees info_t struct fields
+ * @info: the struct address
+ * @all: should be true if freeing all fields
  */
 void free_info(info_t *info, int all)
 {

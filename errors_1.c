@@ -8,17 +8,17 @@
  */
 int _erratoi(char *s)
 {
-	int i = 0;
+	int v = 0;
 	unsigned long int result = 0;
 
 	if (*s == '+')
 		s++;  /* why does this make main return 255? */
-	for (i = 0;  s[i] != '\0'; i++)
+	for (v = 0;  s[v] != '\0'; v++)
 	{
-		if (s[i] >= '0' && s[i] <= '9')
+		if (s[v] >= '0' && s[v] <= '9')
 		{
 			result *= 10;
-			result += (s[i] - '0');
+			result += (s[v] - '0');
 			if (result > INT_MAX)
 				return (-1);
 		}
@@ -55,7 +55,7 @@ void print_error(info_t *info, char *estr)
 int print_d(int input, int fd)
 {
 	int (*__putchar)(char) = _putchar;
-	int i, count = 0;
+	int v, count = 0;
 	unsigned int _abs_, current;
 
 	if (fd == STDERR_FILENO)
@@ -69,14 +69,14 @@ int print_d(int input, int fd)
 	else
 		_abs_ = input;
 	current = _abs_;
-	for (i = 1000000000; i > 1; i /= 10)
+	for (v = 1000000000; v > 1; v /= 10)
 	{
-		if (_abs_ / i)
+		if (_abs_ / v)
 		{
-			__putchar('0' + current / i);
+			__putchar('0' + current / v);
 			count++;
 		}
-		current %= i;
+		current %= v;
 	}
 	__putchar('0' + current);
 	count++;
@@ -85,12 +85,12 @@ int print_d(int input, int fd)
 }
 
 /**
- * convert_number - this is the converter function, a clone of itoa
+ * convert_number - this is the converter
+ * function, a clone of itoa
  * @num: the number
  * @base: the base
  * @flags: the argument flags
- *
- * Return: reurn string
+ * Return: this reurn string
  */
 char *convert_number(long int num, int base, int flags)
 {
@@ -122,17 +122,16 @@ char *convert_number(long int num, int base, int flags)
 /**
  * remove_comments - the function replaces first instance of '#' with '\0'
  * @buf: the address of the string to modify
- *
  * Return: Always return 0;
  */
 void remove_comments(char *buf)
 {
-	int i;
+	int v;
 
-	for (i = 0; buf[i] != '\0'; i++)
-		if (buf[i] == '#' && (!i || buf[i - 1] == ' '))
+	for (v = 0; buf[v] != '\0'; v++)
+		if (buf[v] == '#' && (!v || buf[v - 1] == ' '))
 		{
-			buf[i] = '\0';
+			buf[v] = '\0';
 			break;
 		}
 }
