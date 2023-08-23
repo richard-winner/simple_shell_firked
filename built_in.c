@@ -9,12 +9,12 @@
  */
 int _myexit(info_t *info)
 {
-	int the_exitcheck;
+	int de_exitcheck;
 
 	if (info->argv[1])
 	{
-		the_exitcheck = _erratoi(info->argv[1]);
-		if (the_exitcheck == -1)
+		de_exitcheck = _erratoi(info->argv[1]);
+		if (de_exitcheck == -1)
 		{
 			info->status = 2;
 			print_error(info, "Illegal number: ");
@@ -28,7 +28,6 @@ int _myexit(info_t *info)
 	info->err_num = -1;
 	return (-2);
 }
-
 /**
  * _mycd - this function changes the current directory of the process
  * @info: the structure contains potential arguments
