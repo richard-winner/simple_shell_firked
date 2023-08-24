@@ -1,3 +1,3 @@
-This is an Alx simple shell project and all contributors can be seen at the AUTHOR file.
+This is an Alx simple shell project; all contributors can be seen in the AUTHOR file.
 
-0x16. C - Simple Shel
+0x16. C - Simple Shell
