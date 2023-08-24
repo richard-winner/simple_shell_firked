@@ -46,13 +46,13 @@ char *_strncat(char *dest, char *src, int n)
 	z = 0;
 	while (dest[v] != '\0')
 		v++;
-	while (src[j] != '\0' && j < n)
+	while (src[z] != '\0' && z < n)
 	{
-		dest[v] = src[j];
+		dest[v] = src[z];
 		v++;
-		j++;
+		z++;
 	}
-	if (j < n)
+	if (z < n)
 		dest[v] = '\0';
 	return (s);
 }
