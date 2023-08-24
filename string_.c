@@ -56,7 +56,8 @@ char *_strcat(char *dest, char *src)
  * _strcmp - exicogarphic comparison of two strangs.
  * @s1: strang 1
  * @s2: strang 2
- * Return: negative if s1 is less than s2, positive if s1 is greater than s2, and zero if s1 is equal to s2
+ * Return: negative if s1 is less than s2,
+ * positive if s1 is greater than s2, and zero if s1 is equal to s2
  */
 
 int _strcmp(char *s1, char *s2)

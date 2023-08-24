@@ -44,12 +44,13 @@ int hsh(info_t *info, char **av)
 }
 
 /**
- * find_builtin - finds a built-in command in code
+ * find_builtin - fuction finds a built-in command in code
  * @info: returns info struct and the parameter
  * RETURNS:
  * returns -1 if built-in is not found in code,
  * returns 0 if built-in is executed successfully,
- * returns 1 if built-in is found but failed, and returns 2 if built-in signals an exit() from code
+ * returns 1 if built-in is found but failed,
+ * and returns 2 if built-in signals an exit() from code
  */
 
 int find_builtin(info_t *info)
