@@ -37,7 +37,7 @@ int print_alias(list_t *node)
 		_putchar('\'');
 		_puts(p + 1);
 		_puts("'\n");
-		return(0);
+		return (0);
 	}
 	return (1);
 }
