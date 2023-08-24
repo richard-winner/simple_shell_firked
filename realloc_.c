@@ -5,7 +5,7 @@
  * @ptr: pointer to previous malloc'ated block
  * @old_size: previous block byte size
  * @new_size: New block byte size
- * Return: ol'block named pointer 
+ * Return: ol'block named pointer
  */
 
 
@@ -37,7 +37,7 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
  * @b: Fill *s with byte
  *  @s: Memory area pointer
  * @n: Amount of bytes to be filled
- * Return: Memory area pointer 
+ * Return: Memory area pointer
  */
 
 char *_memset(char *s, char b, unsigned int n)

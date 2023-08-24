@@ -1,7 +1,7 @@
 #include "shell.h"
 
 /**
- * list_len - Length of linked list is determined 
+ * list_len - Length of linked list is determined
  * @h: First node Pointer
  * Return: list size
  */
@@ -76,7 +76,7 @@ char **list_to_strings(list_t *head)
 	return (strs);
 }
 
-/*
+/**
  * print_list - All elements of a list_t linked lst are Printed
  * @h: First node pointer
  * Return: List size
