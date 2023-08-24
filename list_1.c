@@ -76,7 +76,7 @@ char **list_to_strings(list_t *head)
 	return (strs);
 }
 
-/*
+/**
  * print_list - All elements of a list_t linked lst are Printed
  * @h: First node pointer
  * Return: List size
